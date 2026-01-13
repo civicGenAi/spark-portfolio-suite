@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import cvPdf from "../assests/cv.pdf";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -179,7 +178,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <motion.a
-              href={cvPdf}
+              href="/cv.pdf"
               download="Rahman_Mbahe_CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -233,6 +232,29 @@ const HeroSection = () => {
             >
               Let's Connect
             </motion.a>
+          </motion.div>
+
+          {/* Tech stack icons */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="mt-16 flex items-center justify-center gap-6 text-white/30"
+          >
+            <div className="text-xs uppercase tracking-wider font-medium">Powered by</div>
+            <div className="flex items-center gap-4">
+              {["React", "AI/ML", "Laravel", "Node.js"].map((tech, i) => (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.3 + i * 0.1 }}
+                  className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-white/50 border border-white/10"
+                >
+                  {tech}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Scroll indicator */}
