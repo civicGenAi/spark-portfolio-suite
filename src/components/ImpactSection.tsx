@@ -194,7 +194,7 @@ const ImpactSection = () => {
                   Flagship Initiative
                 </span>
                 <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
-                  AgroCare (AgroDrone-PSI)
+                  AgroCare
                 </h3>
                 <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
                   An AI-powered agricultural platform designed to support precision farming by enabling early detection 
