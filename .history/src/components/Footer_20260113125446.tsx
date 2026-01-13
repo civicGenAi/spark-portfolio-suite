@@ -17,7 +17,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            © 2026 Rahman Mbahe. Made with{" "}
+            © 2025 Rahman Mbahe. Made with{" "}
             <Heart className="w-4 h-4 text-primary fill-primary" /> in Tanzania.
           </p>
 

@@ -56,7 +56,7 @@ const ContactSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="https://www.linkedin.com/in/rahman-mbahe-145807278/?originalSubdomain=tz"
+              href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground rounded-full font-semibold text-lg hover:bg-secondary/80 transition-all duration-300 w-full sm:w-auto justify-center"
@@ -67,7 +67,7 @@ const ContactSection = () => {
             </a>
             
             <a
-              href="mailto:rahmanmbahe07@gmail.com"
+              href="mailto:hello@rahmanmbahe.com"
               className="group flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <Mail className="w-5 h-5" />
