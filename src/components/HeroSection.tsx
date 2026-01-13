@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Award, Trophy, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -35,58 +34,58 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container-narrow px-6 text-center">
-        {/* Badge */}
+        {/* Decorative floating elements */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute top-1/4 left-10 md:left-20 hidden md:block"
         >
-          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-sm font-medium text-muted-foreground">
-            Available for collaboration
-          </span>
+          <motion.div
+            animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 5, repeat: Infinity }}
+            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-primary/20 flex items-center justify-center"
+          >
+            <span className="text-2xl">🚀</span>
+          </motion.div>
         </motion.div>
 
-        {/* Main headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6 text-balance"
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          className="absolute top-1/3 right-10 md:right-20 hidden md:block"
         >
-          Building{" "}
+          <motion.div
+            animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
+            transition={{ duration: 6, repeat: Infinity }}
+            className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-emerald-500/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center"
+          >
+            <span className="text-2xl">💡</span>
+          </motion.div>
+        </motion.div>
+
+        {/* Main headline - Clean and Bold */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight mb-8"
+        >
           <span className="text-gradient-gold">AI-Driven Solutions</span>
           <br />
-          That Empower Youth Across Africa.
+          <span className="text-foreground">for Africa's Future.</span>
         </motion.h1>
 
-        {/* Subtitle */}
+        {/* Subtitle - Simple role description */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto mb-12 font-medium"
         >
-          Developer & Digital Creator | AI Expert | Strategic Planner | Community Engagement Advocate
+          Developer • AI Expert • Community Builder
         </motion.p>
-
-        {/* Achievement badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
-        >
-          <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-card border border-border/50">
-            <Award className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium">3× TEHAMA Award Winner – Education (2025)</span>
-          </div>
-          <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-card border border-border/50">
-            <Trophy className="w-5 h-5 text-accent" />
-            <span className="text-sm font-medium">3× Arusha Innovation Week Champion (2025)</span>
-          </div>
-        </motion.div>
 
         {/* CTA buttons */}
         <motion.div
@@ -97,9 +96,9 @@ const HeroSection = () => {
         >
           <a
             href="#services"
-            className="group px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center gap-2"
+            className="group px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center gap-2"
           >
-            View My Work
+            Explore My Work
             <motion.span
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -109,9 +108,9 @@ const HeroSection = () => {
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+            className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
           >
-            Let's Collaborate
+            Get in Touch
           </a>
         </motion.div>
 
@@ -125,10 +124,13 @@ const HeroSection = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-muted-foreground"
+            className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2"
           >
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
-            <ArrowDown className="w-4 h-4" />
+            <motion.div
+              animate={{ y: [0, 8, 0], opacity: [1, 0.3, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-1.5 h-1.5 rounded-full bg-primary"
+            />
           </motion.div>
         </motion.div>
       </div>
