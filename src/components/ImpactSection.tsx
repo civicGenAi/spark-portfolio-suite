@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { Users, Award, Handshake, Rocket } from "lucide-react";
+import { Users, Award, Handshake, Rocket, Leaf, ExternalLink } from "lucide-react";
 
 const stats = [
   {
@@ -123,45 +123,105 @@ const ImpactSection = () => {
           ))}
         </div>
 
-        {/* Founder Highlight */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-20 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-accent/5 border border-primary/20 relative overflow-hidden"
-        >
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-          
-          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25">
-                <Rocket className="w-12 h-12 text-primary-foreground" />
-              </div>
-            </div>
+        {/* Flagship Initiatives */}
+        <div className="mt-20 space-y-8">
+          {/* Career na mimi */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-accent/5 border border-primary/20 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             
-            <div className="text-center lg:text-left">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary mb-3">
-                Flagship Initiative
-              </span>
-              <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
-                Career na mimi Organization
-              </h3>
-              <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-                A mission-driven organization empowering young Africans through AI-powered career guidance, 
-                mentorship programs, and digital learning experiences. Bridging the gap between education 
-                and meaningful career pathways.
-              </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
-                {["Mission-Driven", "Youth-Focused", "AI-Powered", "Mentorship"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground">
-                    {tag}
-                  </span>
-                ))}
+            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25">
+                  <Rocket className="w-12 h-12 text-primary-foreground" />
+                </div>
+              </div>
+              
+              <div className="text-center lg:text-left flex-1">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary mb-3">
+                  Flagship Initiative
+                </span>
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
+                  Career na mimi Organization
+                </h3>
+                <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                  A mission-driven organization empowering young Africans through AI-powered career guidance, 
+                  mentorship programs, and digital learning experiences. Bridging the gap between education 
+                  and meaningful career pathways.
+                </p>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
+                  {["Mission-Driven", "Youth-Focused", "AI-Powered", "Mentorship"].map((tag) => (
+                    <span key={tag} className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://caeerhub-platform.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Visit Platform
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* AgroCare */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-emerald-500/10 via-card to-green-500/5 border border-emerald-500/20 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            
+            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                  <Leaf className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              
+              <div className="text-center lg:text-left flex-1">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 mb-3">
+                  Flagship Initiative
+                </span>
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
+                  AgroCare (AgroDrone-PSI)
+                </h3>
+                <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                  An AI-powered agricultural platform designed to support precision farming by enabling early detection 
+                  of crop diseases and real-time crop health monitoring. Leveraging artificial intelligence and drone 
+                  or image-based analysis to identify signs of plant stress and disease at an early stage, helping farmers 
+                  make timely, data-driven decisions for sustainable agriculture.
+                </p>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
+                  {["AI-Powered", "Precision Farming", "Crop Health", "Sustainable"].map((tag) => (
+                    <span key={tag} className="px-4 py-2 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-400">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://agrodrone-psi.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
+                >
+                  Visit Platform
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
