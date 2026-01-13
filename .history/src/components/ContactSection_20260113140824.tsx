@@ -74,17 +74,6 @@ const ContactSection = () => {
               Email Me
               <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </a>
-            
-            <a
-              href="https://www.instagram.com/rahman_mbahe/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 bg-red-500/20 text-red-500 rounded-full font-semibold text-lg hover:bg-red-500/30 transition-all duration-300 w-full sm:w-auto justify-center border border-red-500/30"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram
-              <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-            </a>
           </motion.div>
 
           {/* Partner CTA */}

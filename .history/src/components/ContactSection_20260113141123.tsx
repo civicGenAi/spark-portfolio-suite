@@ -79,7 +79,7 @@ const ContactSection = () => {
               href="https://www.instagram.com/rahman_mbahe/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 bg-red-500/20 text-red-500 rounded-full font-semibold text-lg hover:bg-red-500/30 transition-all duration-300 w-full sm:w-auto justify-center border border-red-500/30"
+              className="group flex items-center gap-3 px-8 py-4 bg-accent/20 text-accent-foreground rounded-full font-semibold text-lg hover:bg-accent/30 transition-all duration-300 w-full sm:w-auto justify-center border border-accent/30"
             >
               <Instagram className="w-5 h-5" />
               Instagram
